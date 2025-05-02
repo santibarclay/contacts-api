@@ -1,0 +1,32 @@
+{
+  "name": "contacts-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test:client": "node client/test-client.js",
+    "test:search": "node client/test-client.js /contacts/search POST"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santibarclay/contacts-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santibarclay/contacts-api/issues"
+  },
+  "homepage": "https://github.com/santibarclay/contacts-api#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
