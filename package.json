@@ -6,7 +6,9 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test:client": "node client/test-client.js",
-    "test:search": "node client/test-client.js /contacts/search POST"
+    "test:search": "node client/test-client.js /contacts/search POST",
+    "docker:build": "docker build -t contacts-api -f docker/Dockerfile .",
+    "docker:run": "docker run -p 8081:8081 contacts-api"
   },
   "repository": {
     "type": "git",
