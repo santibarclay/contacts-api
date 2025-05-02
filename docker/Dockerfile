@@ -13,6 +13,15 @@ RUN npm install --production
 # Copiar el resto del código de la aplicación
 COPY . .
 
+# Crear un usuario sin privilegios
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+# Cambiar la propiedad de los archivos de la aplicación
+RUN chown -R appuser:appgroup /app
+
+# Cambiar al usuario sin privilegios
+USER appuser
+
 # Exponer el puerto 8081 que usa nuestra aplicación
 EXPOSE 8081
 
